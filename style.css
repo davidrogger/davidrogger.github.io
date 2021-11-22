@@ -20,14 +20,20 @@ h3 {
     color:  white;
     padding: 10px;
 }
-nav a {
-    color: white;
+a {
+    
+    color: rgb(97, 196, 226);
     text-decoration: none; 
+    
 }
 .focoTexto {
-    background-color:#0a1f1f80;
+    background-color:#0a1f1f9a;
     text-decoration: none;
     color: white;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
+}
+.fotoPrincipal {
+    border-radius: 100%;
 }
