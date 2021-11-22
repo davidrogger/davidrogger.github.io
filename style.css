@@ -1,6 +1,23 @@
 body {
     background-color: rgb(103, 131, 103);
+    color: white;
 }
-#fotoIntro {
+#textoFoto {
+    font-style: italic;    
+}
+#divFoto {
     text-align: center;
+}
+h3 {
+    background-color: rgb(65, 70, 65);
+}
+#menuInicial {
+    text-align: center;
+    background-color: rgb(65, 70, 65);
+    font-size: 2em;
+    color:  white;
+}
+nav a {
+    color: white;
+    text-decoration: none;
 }
