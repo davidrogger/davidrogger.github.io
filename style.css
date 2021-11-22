@@ -1,23 +1,33 @@
 body {
     background-color: rgb(103, 131, 103);
-    color: white;
+    color: white;    
+    background-image: url(./img/bg_webdv.png); /* agradecimento https://freeimages-2019.blogspot.com/2018/08/web-developer-background-images.html */
+    
 }
 #textoFoto {
     font-style: italic;    
 }
 #divFoto {
-    text-align: center;
+    text-align: center;    
 }
 h3 {
-    background-color: rgb(65, 70, 65);
+    background-color: #0a1f1f;
 }
 #menuInicial {
     text-align: center;
-    background-color: rgb(65, 70, 65);
+    background-color: #0a1f1f;
     font-size: 2em;
     color:  white;
+    padding: 10px;
 }
 nav a {
     color: white;
+    text-decoration: none; 
+}
+.focoTexto {
+    background-color:#0a1f1f80;
     text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
