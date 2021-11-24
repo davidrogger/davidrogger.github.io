@@ -30,18 +30,16 @@ a {
     background-color: #0a1f1f;
 }
 .blocoFoto {
-    height: 480px;        
+    height: 480px;    
 }
 .meuNome {
     text-align: center;
 }
 
-.descricao {
-    position: relative;
-    padding-left: 30%;
-    padding-right: 10%;
-    padding-top: 1%;
-    text-align: justify; 
+.descricao {        
+    text-align: justify;
+    padding-left: 500px;
+    
 }
 
 ul li:nth-of-type(odd) {
