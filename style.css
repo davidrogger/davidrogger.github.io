@@ -1,18 +1,15 @@
 body {
     background-color: rgb(103, 131, 103);
-    color: white;    
-    background-image: url(./img/bg_webdv.png); /* agradecimento https://freeimages-2019.blogspot.com/2018/08/web-developer-background-images.html */
+    color: white;
+    padding: 1%;   
     
 }
 #textoFoto {
     font-style: italic;    
 }
-#divFoto {
-    text-align: center;    
-}
-h3 {
+/* h3 {
     background-color: #0a1f1f;
-}
+} */
 #menuInicial {
     text-align: center;
     background-color: #0a1f1f;
@@ -26,14 +23,28 @@ a {
     text-decoration: none; 
     
 }
-.focoTexto {
-    background-color:#0a1f1f9a;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+
+#minhaFoto {
+    float: left;
+    padding: 15px;
+    background-color: #0a1f1f;
+}
+.blocoFoto {
+    height: 480px;        
+}
+.meuNome {
     text-align: center;
 }
-.fotoPrincipal {
-    border-radius: 100%;
+
+.descricao {
+    position: relative;
+    padding-left: 30%;
+    padding-right: 10%;
+    padding-top: 1%;
+    text-align: justify; 
+}
+
+ul li:nth-of-type(odd) {
+    font-weight: bold;
+    text-decoration: underline;
 }
