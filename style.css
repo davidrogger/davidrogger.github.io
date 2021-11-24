@@ -36,10 +36,10 @@ a {
     text-align: center;
 }
 
-.descricao {        
-    text-align: justify;
+.descricao {    
+    text-align: justify; 
     padding-left: 500px;
-    
+    padding-top: 15px;
 }
 
 ul li:nth-of-type(odd) {
