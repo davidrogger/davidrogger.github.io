@@ -33,3 +33,19 @@ header li {
 header h1 {
     margin-left: 10px;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #0a1f1f;
+    color: white;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    opacity: 20%;
+}
