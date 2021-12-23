@@ -54,22 +54,22 @@ footer p {
 main {
   display: flex;
   position: relative;
-  justify-content: space-around;
+  justify-content: space-around;  
   align-items: center;
-  height: 90vh;
+  height: 50vh;
 }
 
-#displayed-content, #img-content {
+#displayed-content-container, #img-container {
   display: flex;
   border-radius: 10px;
-  border: 1px solid rgba(255 , 255 , 255 , .05);
-  height: 95%;
+  border: 1px solid rgba(255 , 255 , 255 , .05);  
+  height: 90%;
 }
 
-#displayed-content {
+#displayed-content-container {
   width: 60%;
 }
 
-#img-content {
+#img-container {
   width: 30%;
 }
