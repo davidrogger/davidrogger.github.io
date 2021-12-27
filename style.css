@@ -71,6 +71,12 @@ main {
   background-color: #0d2b2b;
 }
 
+#displayed-content-container ol {
+  list-style-type: square;
+  list-style-position: inside;
+  margin: 0 15px;
+}
+
 #displayed-content-container, #img-container {
   display: flex;
   flex-direction: column;

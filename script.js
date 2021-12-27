@@ -30,10 +30,14 @@ function aboutDisplay() {
 }
 
 function learnDisplay() {
-  const learTxt = '<h2>Técnologias que estou aprendendo</h2><p>Atualmente meu foco na parte de estudos está sendo total para o conteúdo da Trybe.</p>';
-  displayedContent.innerHTML = learTxt;
-  createNewImg('./img/web-development.jpg');
+  const learnTxt = '<h2>Técnologias que estou aprendendo</h2><p>Atualmente meu foco na parte de estudos está sendo total para o conteúdo da Trybe.</p><p>Curso é divido em 4 modulos:</p>';
+  const learnTxt2 = '<ol><li><strong>Fundamentos do Desenvolvimento</strong> - Nesse modulo estamos aprendendo, Unix, Git & Github, HTML, CSS e JavaScript.</li><li><strong>Desenvolvimento Froent-end</strong> - Vamos aprender, React, Metodologias Ageis e Redux.</li><li><strong>Desenvolvimento Back-end</strong> - Vamos aprender Bancos de dados relacionais, NoSQL, Updates, Aggregation Framework, NodeJS, Deploy, arquitetura de software e sockets</li><li><strong>Ciência da Computação</strong> - Vamos aprender, arquitetura de computarores, redes, ferramentas de segurança, python, testes de exceções e entrada e saida de dados.</li></ol>'
+  const learnTxt3 = '<br><p>Para acompanhar meu avanço no aprendizado desses modulos, é mais fácil acompanhar meu github na parte de redes sociais.</p>'
+  displayedContent.innerHTML = learnTxt + learnTxt2 + learnTxt3;
+  createNewImg('./img/learning.png');
 }
+
+
 
 aboutBtn.addEventListener('click', aboutDisplay);
 introBtn.addEventListener('click', welcomeContent);
