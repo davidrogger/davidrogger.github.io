@@ -4,6 +4,9 @@ const nameContainer = document.getElementById('name-container');
 const aboutBtn = document.getElementById('about-btn');
 const introBtn = document.getElementById('intro-btn');
 const learnBtn = document.getElementById('learn-btn');
+const projectsBtn = document.getElementById('projects-btn');
+const networkBtn = document.getElementById('network-btn');
+const hobbiesBtn = document.getElementById('hobbies-btn');
 
 function welcomeContent() {
   const welcomeText = '<h2> Bem vindo ao meu portfólio!</h2> <p> Nessa página você terá acesso aos conteúdos que estou estudando, projetos, redes sociais e também uma parte pessoal com relação aos hobbies quando não estou "codando" haha.🤖</p>'
@@ -12,7 +15,7 @@ function welcomeContent() {
 }
 
 function myName() {
-  const name = '<Davíd Roggér/>'
+  const name = '<Davíd_Roggér/>'
   nameContainer.innerText = name;
 }
 
@@ -37,9 +40,34 @@ function learnDisplay() {
   createNewImg('./img/learning.png');
 }
 
+function projectsDisplay() {
+  const projectsIntro = '<h2>Desenvolvimentos ou participações</h2>';
+  const project01 = `<a href="./projetos/project-lessons-learned/lessons-learned.html" target="_blank">Project Lessons Learned</a>`;
+  const project02 = `<a href="./projetos/project-pixels-art/pixels-art.html" target="_blank">Project Pixels Art</a>`;
+  const project03 = `<a href="./projetos/project-todo-list/todo-list.html" target="_blank">Project To Do List</a>`;
+  const projectsOl = `<ol><li>${project01}</li><li>${project02}</li><li>${project03}</li></ol>`;
 
+  displayedContent.innerHTML = projectsIntro + projectsOl;
+  createNewImg('./img/projects-logo.png');
+}
+
+function networkDisplay() {
+  const networkIntro = '<h2>Minhas redes sociais</h2>';
+  const myLinkedin = ``;
+  displayedContent.innerHTML = networkIntro;
+  createNewImg('./img/network-logo.png');
+}
+
+function hobbiesDisplay() {
+  const hobbiesIntro = '<h2>Atividades em momentos livres</h2>';
+  displayedContent.innerHTML = hobbiesIntro;
+  createNewImg('./img/hobbies-logo.jpg');
+}
 
 aboutBtn.addEventListener('click', aboutDisplay);
 introBtn.addEventListener('click', welcomeContent);
 learnBtn.addEventListener('click', learnDisplay)
+projectsBtn.addEventListener('click', projectsDisplay);
+networkBtn.addEventListener('click', networkDisplay);
+hobbiesBtn.addEventListener('click', hobbiesDisplay);
 window.onload = welcomeContent(), myName();
