@@ -7,6 +7,7 @@ const learnBtn = document.getElementById('learn-btn');
 const projectsBtn = document.getElementById('projects-btn');
 const networkBtn = document.getElementById('network-btn');
 const hobbiesBtn = document.getElementById('hobbies-btn');
+const contactBtn = document.getElementById('contact-btn');
 
 function welcomeContent() {
   const welcomeText = '<h2> Bem vindo ao meu portfólio!</h2> <p> Nessa página você terá acesso aos conteúdos que estou estudando, projetos, redes sociais e também uma parte pessoal com relação aos hobbies quando não estou "codando" haha.🤖</p>'
@@ -64,10 +65,17 @@ function hobbiesDisplay() {
   createNewImg('./img/hobbies-logo.jpg');
 }
 
+function contactDisplay() {
+  const contactIntro = '<h2>Contatos</h2>';
+  displayedContent.innerHTML = contactIntro;
+  createNewImg('./img/contato-logo.png');
+}
+
 aboutBtn.addEventListener('click', aboutDisplay);
 introBtn.addEventListener('click', welcomeContent);
 learnBtn.addEventListener('click', learnDisplay)
 projectsBtn.addEventListener('click', projectsDisplay);
 networkBtn.addEventListener('click', networkDisplay);
 hobbiesBtn.addEventListener('click', hobbiesDisplay);
+contactBtn.addEventListener('click', contactDisplay);
 window.onload = welcomeContent(), myName();
