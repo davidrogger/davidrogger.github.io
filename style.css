@@ -105,6 +105,11 @@ main {
   margin: 0 20px;
 }
 
+#displayed-content-container img {
+  height: 100px;
+  width: 100px;
+}
+
 #img-container {
   object-fit: cover;
   width: 30%;
