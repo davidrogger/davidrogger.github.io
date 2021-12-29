@@ -46,16 +46,24 @@ body {
   margin-left: 10px;
 }
 
+#network-container img {
+  height: 20px;
+  width: 20px;
+  opacity: 90%;
+  margin: 5px 5px;
+}
+
 footer {
   position: relative;
+  flex-direction: column;
   bottom: 0;
   background-color: #0a1f1f;
   color: white;
   display: flex;
-  height: 30px;
+  height: 70px;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
 footer p {
