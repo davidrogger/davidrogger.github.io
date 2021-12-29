@@ -52,39 +52,8 @@ function projectsDisplay() {
   createNewImg('./img/projects-logo.png', imgContainer);
 }
 
-function createDivNetwork(text, idName, display, adress) {
-  const createDiv = document.createElement('div');
-  createDiv.innerHTML = `<a href='${adress}' target='blank_'>${text}</a>`;
-  createDiv.setAttribute('id', idName);
-  display.appendChild(createDiv);
-}
-
-function networkDisplay() {
-  const networkIntro = '<h2>Minhas redes sociais</h2>';  
-  displayedContent.innerHTML = networkIntro;
-  createDivNetwork('Linkedin', 'linkedin', displayedContent, 'https://www.linkedin.com/in/davidrogger/');
-  createDivNetwork('GitHub', 'github', displayedContent, 'https://github.com/davidrogger');
-  createDivNetwork('Facebook', 'facebook', displayedContent, 'https://www.facebook.com/dvdonizuk');
-  createNewImg('./img/network-logo.png', imgContainer);
-}
-
-function hobbiesDisplay() {
-  const hobbiesIntro = '<h2>Atividades em momentos livres</h2>';
-  displayedContent.innerHTML = hobbiesIntro;
-  createNewImg('./img/hobbies-logo.jpg', imgContainer);
-}
-
-function contactDisplay() {
-  const contactIntro = '<h2>Contatos</h2>';
-  displayedContent.innerHTML = contactIntro;
-  createNewImg('./img/contato-logo.png', imgContainer);
-}
-
 aboutBtn.addEventListener('click', aboutDisplay);
 introBtn.addEventListener('click', welcomeContent);
 learnBtn.addEventListener('click', learnDisplay)
 projectsBtn.addEventListener('click', projectsDisplay);
-networkBtn.addEventListener('click', networkDisplay);
-hobbiesBtn.addEventListener('click', hobbiesDisplay);
-contactBtn.addEventListener('click', contactDisplay);
 window.onload = welcomeContent(), myName();
