@@ -5,11 +5,17 @@
   border-color: transparent;
   background-color: transparent;
   box-sizing: border-box;
+  font-family: monospace, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bold-bg-color);
 }
 
 :root {
   --ligth-regular-text-color: #0A1F1F;
   --ligth-regular-bg-color: white;
   --dark-regular-text-color: white;
-  --dark-regular-bg-color: #0A1F1F;
+  --dark-regular-bg-color: #0D2B2B;
+  --dark-bold-bg-color: #0A1F1F;
 }

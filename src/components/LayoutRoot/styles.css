@@ -3,3 +3,11 @@ main {
   width: 100%;
   position: relative;
 }
+
+main section {
+  margin: auto;
+  border-radius: 5px;
+  min-height: calc(100vh - 120px); /* Header + Footer = 100px */
+  background-color: var(--dark-regular-bg-color);
+  width: 80%;
+}

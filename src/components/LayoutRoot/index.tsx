@@ -7,7 +7,9 @@ export default function LayoutRoot({ children }: { children: React.ReactNode }) 
   return (
     <main>
       <Header />
-      { children }
+      <section>
+        { children }
+      </section>
       <Footer />
     </main>
   );

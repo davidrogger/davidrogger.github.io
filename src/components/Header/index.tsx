@@ -5,7 +5,7 @@ export default function Header() {
     <header
       className='header-container dark-header-container'
     >
-      <h1>{'<DavídRoggér />'}</h1>
+      <h2>{'<DavídRoggér />'}</h2>
 
       <nav>
         <a href=''>Home</a>
