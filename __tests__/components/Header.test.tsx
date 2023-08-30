@@ -11,11 +11,13 @@ describe('<Header />', () => {
 
     it('Should render the navbar options', () => {
       render(<Header />);
-      const expectSections = ['Home', 'About'];
+      const expectedSections = ['Home', 'About'];
+
       const navigation = screen.getByRole('navigation');
       expect(navigation).toBeVisible();
+
       const navElement = within(navigation);
-      expectSections.map((sectionName) => {
+      expectedSections.map((sectionName) => {
         expect(navElement.getByRole('link', { name:sectionName })).toBeVisible();
       });
     });
