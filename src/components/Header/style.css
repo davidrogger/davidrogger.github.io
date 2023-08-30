@@ -1,0 +1,11 @@
+.header-container {
+  padding: 0.3rem;
+}
+
+.dark-header-container {
+  position: fixed;
+  width: 100%;
+  background-color: var(--dark-regular-bg-color);
+  opacity: 0.9;
+  color: var(--ligth-regular-bg-color);
+}
