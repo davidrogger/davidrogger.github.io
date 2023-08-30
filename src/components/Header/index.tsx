@@ -1,12 +1,19 @@
 import './style.css';
 
 export default function Header() {
-  const lightMode = false;
   return (
     <header
-      className={ `header-container ${lightMode ? '' : 'dark-header-container'}` }
+      className='header-container dark-header-container'
     >
-      <h1 title='owner'>{'<DavídRoggér />'}</h1>
+      <h1>{'<DavídRoggér />'}</h1>
+
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </nav>
+
     </header>
   );
 }

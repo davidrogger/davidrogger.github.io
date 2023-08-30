@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 
 describe('<Header />', () => {
   describe('Elements render', () => {
@@ -7,6 +7,17 @@ describe('<Header />', () => {
       render(<Header />);
       const title = screen.getByRole('heading', { name: /<davídroggér \/>/i });
       expect(title).toBeVisible();
+    });
+
+    it('Should render the navbar options', () => {
+      render(<Header />);
+      const expectSections = ['Home', 'About'];
+      const navigation = screen.getByRole('navigation');
+      expect(navigation).toBeVisible();
+      const navElement = within(navigation);
+      expectSections.map((sectionName) => {
+        expect(navElement.getByRole('link', { name:sectionName })).toBeVisible();
+      });
     });
   });
 });
