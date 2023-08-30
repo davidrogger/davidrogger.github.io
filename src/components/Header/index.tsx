@@ -8,10 +8,8 @@ export default function Header() {
       <h1>{'<DavídRoggér />'}</h1>
 
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-        </ul>
+        <a href=''>Home</a>
+        <a href=''>About</a>
       </nav>
 
     </header>
