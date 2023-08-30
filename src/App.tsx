@@ -1,8 +1,8 @@
 function App() {
   return (
-    <>
-      none
-    </>
+    <div>
+      <button title='botão de teste'>Teste</button>
+    </div>
   );
 }
 
