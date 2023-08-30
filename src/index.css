@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+:root {
+  --ligth-regular-text-color: #0A1F1F;
+  --ligth-regular-bg-color: #E6E0E0;
+  --dark-regular-text-color: #E6E0E0;
+  --dark-regular-bg-color: #0A1F1F;
+}
