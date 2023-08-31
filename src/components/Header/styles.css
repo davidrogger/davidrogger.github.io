@@ -1,7 +1,7 @@
 .header-container {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   align-items: center;
   padding: 0.3rem;
 }
@@ -10,11 +10,23 @@
   padding: 1rem;
 }
 
+nav {
+  margin-right: 2rem;
+}
+
 nav > * {
   padding: 0.5rem;
+  border-radius: 5px;
+  transition: ease-in-out;
+  transition-duration: 700ms;
+}
+
+.dark-header-container nav > *:hover {
+  background-color: white;
+  color: var(--dark-regular-reverse-text-color);
 }
 
 .dark-header-container {
   width: 100%;
-  color: var(--ligth-regular-bg-color);
+  color: var(--dark-regular-text-color);
 }

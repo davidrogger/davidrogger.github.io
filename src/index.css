@@ -8,6 +8,7 @@
   background-color: transparent;
   box-sizing: border-box;
   font-family: 'PT Serif', serif;
+  text-decoration: none;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   --ligth-regular-text-color: #0A1F1F;
   --ligth-regular-bg-color: white;
   --dark-regular-text-color: white;
+  --dark-regular-reverse-text-color: #0D2B2B;
   --dark-regular-bg-color: #0D2B2B;
   --dark-bold-bg-color: #0A1F1F;
 }
