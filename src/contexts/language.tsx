@@ -7,20 +7,32 @@ import contentData from '@/assets/languages.json';
 
 export type AvailableLanguages = 'pt-br' | 'en-us';
 
-type Session = {
-  navbar: string[],
+type Navbar = {
+  section: string,
+  route: '/' | '/projects' | '/contacts',
+}
+
+type Home = {
+  title: string;
+}
+
+type Section = {
+  navbar: Navbar[],
+  sections: {
+    home: Home
+  };
 }
 
 type LanguageContextProps = {
-  content: Session,
-  setContent: Dispatch<React.SetStateAction<Session>>
+  content: Section,
+  setContent: Dispatch<React.SetStateAction<Section>>
 }
 
 const LanguageContext = createContext<LanguageContextProps>({} as LanguageContextProps);
 
 export function LanguageProvider({ children }:{children:ReactNode}) {
   const { pathname } = useLocation();
-  const [content, setContent] = useState<Session>(contentData[getPathLanguage(pathname)] as Session);
+  const [content, setContent] = useState<Section>(contentData[getPathLanguage(pathname)] as Section);
   return (
     <LanguageContext.Provider value={{ content, setContent }}>
       { children }

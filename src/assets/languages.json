@@ -1,8 +1,48 @@
 {
   "pt-br": {
-    "navbar": ["Página Inicial", "Projetos", "Contato"]
+    "navbar": [
+      {
+        "section": "Página Inicial",
+        "route": "/"
+      },
+      {
+        "section": "Projetos",
+        "route": "/projects"
+      },
+      {
+        "section": "Contato",
+        "route": "/contact"
+      }
+    ],
+  "sections": {
+    "home": {
+      "title": "Oi eu sou goku"
+    },
+    "projects": {},
+    "contact": {}
+  }
   },
   "en-us": {
-    "navbar": ["Home", "Projects", "Contact"]
+    "navbar": [
+      {
+        "section": "Home",
+        "route": "/"
+      },
+      {
+        "section": "Projects",
+        "route": "/projects"
+      },
+      {
+        "section": "Contact",
+        "route": "/contact"
+      }
+    ],
+    "sections": {
+      "home": {
+        "title": "Hi i'm goku"
+      },
+      "projects": {},
+      "contact": {}
+    }
   }
 }

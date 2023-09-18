@@ -1,26 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, Navigate, RouteObject, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import ErrorPage from '@/assets/pages/error-page';
-
-import { applyLayout } from '@/components/layout-root';
+import { ThemeProvider } from '@/contexts/theme';
+import { routes } from '@/pages/routes';
 import './index.css';
-
-import App from './App';
-import { ThemeProvider } from './contexts/theme';
-
-const routes:RouteObject[] = [
-  {
-    path: '/',
-    element: <Navigate to='/pt-br' />,
-  },
-  {
-    path: '/:language',
-    element: applyLayout(<App />),
-    errorElement: applyLayout(<ErrorPage />),
-  },
-];
 
 const router = createBrowserRouter(routes);
 
