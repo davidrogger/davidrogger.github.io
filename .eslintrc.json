@@ -47,6 +47,8 @@
           [
             "module"
           ],
+          "/^@/assets/",
+          "/^@/components/",
           [
             "/^~//"
           ],

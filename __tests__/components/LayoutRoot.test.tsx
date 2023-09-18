@@ -1,6 +1,8 @@
-import content from '@/assets/languages.json';
-import LayoutRoot from '@/components/LayoutRoot';
 import { render, screen } from '@testing-library/react';
+
+import content from '@/assets/languages.json';
+
+import LayoutRoot from '@/components/LayoutRoot';
 
 describe('<LayoutRoot />', () => {
   it('Should render a default component with the set children', () => {

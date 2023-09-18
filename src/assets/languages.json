@@ -1,4 +1,8 @@
 {
-  "name": "Davíd Roggér",
-  "pt-br": {}
+  "pt-br": {
+    "navbar": ["Página Inicial", "Projetos", "Contato"]
+  },
+  "en-us": {
+    "navbar": ["Home", "Projects", "Contact"]
+  }
 }

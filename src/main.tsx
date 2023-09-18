@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouteObject, RouterProvider } from 'react-router-dom';
 
-import LayoutRoot from '@/components/LayoutRoot';
+import ErrorPage from '@/assets/pages/error-page';
+
+import { applyLayout } from '@/components/layout-root';
 import './index.css';
 
 import App from './App';
 
-const homeElements = (
-  <LayoutRoot>
-    <App />
-  </LayoutRoot>
-);
-
-const router = createBrowserRouter([
+const routes:RouteObject[] = [
   {
     path: '/',
-    element: homeElements,
-  }
-]);
+    element: <Navigate to='/pt-br' />,
+  },
+  {
+    path: '/:language',
+    element: applyLayout(<App />),
+    errorElement: applyLayout(<ErrorPage />),
+  },
+];
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

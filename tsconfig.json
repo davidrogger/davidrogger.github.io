@@ -17,9 +17,9 @@
     /* Custom Paths */
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*/index.tsx"],
-      "@/assets/*": ["src/assets/*"]
+      "@/*": ["./src/*"]
     },
+    
 
     /* Linting */
     "strict": true,
