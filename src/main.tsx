@@ -8,6 +8,7 @@ import { applyLayout } from '@/components/layout-root';
 import './index.css';
 
 import App from './App';
+import { ThemeProvider } from './contexts/theme';
 
 const routes:RouteObject[] = [
   {
@@ -25,6 +26,8 @@ const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>,
 );
