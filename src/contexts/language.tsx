@@ -9,30 +9,38 @@ export type AvailableLanguages = 'pt-br' | 'en-us';
 
 type Navbar = {
   section: string,
-  route: '/' | '/projects' | '/contacts',
+  route: '/' | '/projects',
+  tooltip: string,
 }
 
 type Home = {
-  title: string;
+  title: string,
 }
 
-type Section = {
-  navbar: Navbar[],
+type PageStructure = {
+  header: {
+    navbar: Navbar[],
+  },
   sections: {
     home: Home
-  };
+  },
+  footer: {
+    navbar: {
+      tooltip: string,
+    }
+  }
 }
 
 type LanguageContextProps = {
-  content: Section,
-  setContent: Dispatch<React.SetStateAction<Section>>
+  content: PageStructure,
+  setContent: Dispatch<React.SetStateAction<PageStructure>>
 }
 
 const LanguageContext = createContext<LanguageContextProps>({} as LanguageContextProps);
 
 export function LanguageProvider({ children }:{children:ReactNode}) {
   const { pathname } = useLocation();
-  const [content, setContent] = useState<Section>(contentData[getPathLanguage(pathname)] as Section);
+  const [content, setContent] = useState<PageStructure>(contentData[getPathLanguage(pathname)] as PageStructure);
   return (
     <LanguageContext.Provider value={{ content, setContent }}>
       { children }

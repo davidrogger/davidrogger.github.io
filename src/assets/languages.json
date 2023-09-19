@@ -1,40 +1,58 @@
 {
   "pt-br": {
-    "navbar": [
-      {
-        "section": "Página Inicial",
-        "route": "/"
-      },
-      {
-        "section": "Projetos",
-        "route": "/projects"
-      }
-    ],
+    "header": {
+      "navbar": [
+        {
+          "section": "Página Inicial",
+          "route": "/",
+          "tooltip": "Redireciona para página inicial"
+        },
+        {
+          "section": "Projetos",
+          "route": "/projects",
+          "tooltip": "Redireciona para página de projetos"
+        }
+      ]
+    },
   "sections": {
     "home": {
       "title": "Oi eu sou goku"
     },
-    "projects": {},
-    "contact": {}
-  }
+      "projects": {},
+      "contact": {}
+    },
+    "footer": {
+      "navbar": {
+        "tooltip": "Redireciona para a página do {{page}}"
+      }
+    }
   },
   "en-us": {
-    "navbar": [
-      {
-        "section": "Home",
-        "route": "/"
-      },
-      {
-        "section": "Projects",
-        "route": "/projects"
-      }
-    ],
+    "header": {
+      "navbar": [
+        {
+          "section": "Home",
+          "route": "/",
+          "tooltip": "Redirect to the home page"
+        },
+        {
+          "section": "Projects",
+          "route": "/projects",
+          "tooltip": "Redirect to the projects page"
+        }
+      ]
+    },    
     "sections": {
       "home": {
         "title": "Hi i'm goku"
       },
       "projects": {},
       "contact": {}
+    },
+    "footer": {
+      "navbar": {
+        "tooltip": "Open a new tab to the {{page}} page"
+      }
     }
   }
 }

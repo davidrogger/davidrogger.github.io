@@ -1,22 +1,27 @@
+import { Link } from 'react-router-dom';
+
+import { userLanguageContext } from '@/contexts/language';
+import { replaceWordPageFromPhrase } from '@/services/replaceWord';
 import { Github, Linkedin } from 'lucide-react';
 
-const defaultIconSize = 28;
+const defaultIconSize = 20;
 
 const Contacts = [
   {
     Icon: Github,
-    title: '',
-    link: '',
+    page: 'GitHub',
+    link: 'https://github.com/davidrogger',
   },
   {
     Icon: Linkedin,
-    title: '',
-    link: '',
+    page: 'Linkedin',
+    link: 'https://www.linkedin.com/in/davidrogger/',
   },
 ];
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const { content: { footer } } = userLanguageContext();
 
   return (
     <footer className="flex justify-end p-4 bg-primary">
@@ -27,13 +32,19 @@ export default function Footer() {
           {`© ${year} - Davíd Roggér`}
         </span>
         <nav className='flex gap-2 mt-2 [&>*]:border-bg-accent [&>*]:p-1 [&>*]:rounded cursor-pointer text-accent-foreground'>
-          {Contacts.map(({ Icon }, index) => (
-            <Icon
+          {Contacts.map(({ Icon, page, link }, index) => (
+            <Link
+              target='_blank'
+              to={link}
               key={index}
-              strokeWidth={0.5}
-              size={defaultIconSize}
               className='hover:bg-secondary'
-            />
+              title={replaceWordPageFromPhrase(footer.navbar.tooltip, page)}
+            >
+              <Icon
+                strokeWidth={0.5}
+                size={defaultIconSize}
+              />
+            </Link>
           ))}
         </nav>
       </div>
