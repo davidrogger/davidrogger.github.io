@@ -14,12 +14,20 @@
         }
       ]
     },
-  "sections": {
+  "section": {
     "home": {
       "title": "Oi eu sou goku"
     },
-      "projects": {},
-      "contact": {}
+      "projects": {
+        "title": "Projetos",
+        "all": [
+          {
+            "title": "Primeiro",
+            "img": "none",
+            "link": "none"
+          }
+        ]
+      }
     },
     "footer": {
       "navbar": {
@@ -42,12 +50,20 @@
         }
       ]
     },    
-    "sections": {
+    "section": {
       "home": {
         "title": "Hi i'm goku"
       },
-      "projects": {},
-      "contact": {}
+      "projects": {
+        "title": "Projects",
+          "all": [
+            {
+              "title": "Primeiro",
+              "img": "none",
+              "link": "none"
+            }
+          ]
+      }
     },
     "footer": {
       "navbar": {

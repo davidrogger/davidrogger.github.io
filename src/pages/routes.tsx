@@ -5,7 +5,6 @@ import ErrorPage from '@/pages/error-page';
 import LayoutRoot from '@/components/layout-root';
 import { Section } from '@/components/section';
 
-import { Contact } from './contact';
 import { Home } from './home';
 import { Projects } from './projects';
 
@@ -29,10 +28,6 @@ export const routes:RouteObject[] = [
           {
             path: 'projects',
             element: <Projects />,
-          },
-          {
-            path: 'contact',
-            element: <Contact />,
           },
         ]
       },

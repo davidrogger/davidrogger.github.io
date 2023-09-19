@@ -17,12 +17,22 @@ type Home = {
   title: string,
 }
 
+type Project = {
+  title: string,
+  img: string,
+  link: string,
+}
+
 type PageStructure = {
   header: {
     navbar: Navbar[],
   },
-  sections: {
-    home: Home
+  section: {
+    home: Home,
+    projects: {
+      title: string,
+      all: Project[]
+    }
   },
   footer: {
     navbar: {
