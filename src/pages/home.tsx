@@ -1,7 +1,7 @@
 import { userLanguageContext } from '@/contexts/language';
 
 export function Home(){
-  const { content: { sections: { home } } } = userLanguageContext();
+  const { content: { section: { home } } } = userLanguageContext();
 
   return (
     <div>
