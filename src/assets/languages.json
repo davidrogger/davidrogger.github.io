@@ -8,10 +8,6 @@
       {
         "section": "Projetos",
         "route": "/projects"
-      },
-      {
-        "section": "Contato",
-        "route": "/contact"
       }
     ],
   "sections": {
@@ -31,10 +27,6 @@
       {
         "section": "Projects",
         "route": "/projects"
-      },
-      {
-        "section": "Contact",
-        "route": "/contact"
       }
     ],
     "sections": {
