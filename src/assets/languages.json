@@ -19,7 +19,12 @@
       "title": "Oi eu sou goku"
     },
       "projects": {
-        "title": "Projetos"
+        "title": "Projetos",
+        "card": {
+          "topic1": "Desenvolvimento",
+          "topic2": "Ferramentas",
+          "topic3": "Detalhes"
+        }
       }
     },
     "footer": {
@@ -48,7 +53,12 @@
         "title": "Hi i'm goku"
       },
       "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "card": {
+          "topic1": "Development",
+          "topic2": "Tools",
+          "topic3": "Details"
+        }
       }
     },
     "footer": {

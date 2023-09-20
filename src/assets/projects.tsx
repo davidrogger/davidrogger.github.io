@@ -1,114 +1,131 @@
 const frontend = [
   {
     title: 'Solar System',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-solar-system/main/imgs/project_solar_system_top.jpg',
-    link: 'https://github.com/davidrogger/trybe-project-solar-system'
+    link: 'https://github.com/davidrogger/trybe-project-solar-system',
+    tools: []
   },
   {
     title: 'Tryunfo',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-tryunfo/main/imgs/project_tryunfo_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-tryunfo'
+    link: 'https://github.com/davidrogger/trybe-project-tryunfo',
+    tools: []
   },
   {
     title: 'Trybetunes',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-trybetunes/main/readme-imgs/project_trybetunes_mid.webp',
-    link: 'https://github.com/davidrogger/trybe-project-trybetunes'
+    link: 'https://github.com/davidrogger/trybe-project-trybetunes',
+    tools: []
   },
   {
     title: 'Online Store',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-frontend-online-store/main/readme-imgs/project_frontend_store_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-frontend-online-store'
+    link: 'https://github.com/davidrogger/trybe-project-frontend-online-store',
+    tools: []
   },
   {
     title: 'TrybeWallet',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-trybewallet/main/readme-imgs/project_trybewallet_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-trybewallet'
+    link: 'https://github.com/davidrogger/trybe-project-trybewallet',
+    tools: []
   },
   {
     title: 'Trivia',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-trivia/main/readme-imgs/project_trivia_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-trivia'
+    link: 'https://github.com/davidrogger/trybe-project-trivia',
+    tools: []
   },
   {
     title: 'StarWars Planets Search',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-starwars-planets-search/main/readme-imgs/project_starwars_planets_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-starwars-planets-search'
+    link: 'https://github.com/davidrogger/trybe-project-starwars-planets-search',
+    tools: []
   },
   {
     title: 'Recipes App',
-    type: 'frontend',
+    development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-recipes-app/main/readme-imgs/project_recipes_app_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-recipes-app'
+    link: 'https://github.com/davidrogger/trybe-project-recipes-app',
+    tools: []
   },
 ];
 
 const testing = [
   {
     title: 'RTL',
-    type: 'Testing',
+    development: 'Testing',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-react-testing-library/main/readme-imgs/project_rtl_top2.webp',
-    link: 'https://github.com/davidrogger/trybe-project-react-testing-library'
+    link: 'https://github.com/davidrogger/trybe-project-react-testing-library',
+    tools: []
   },
 ];
 
 const backend = [
   {
     title: 'Talker Manager',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-backend/main/imgs/04_project_talker_manager.webp',
-    link: 'https://github.com/davidrogger/trybe-project-talker-manager'
+    link: 'https://github.com/davidrogger/trybe-project-talker-manager',
+    tools: []
   },
   {
     title: 'Store Manager',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-backend/main/imgs/05_project_store_manager.webp',
-    link: 'https://github.com/davidrogger/trybe-project-store-manager'
+    link: 'https://github.com/davidrogger/trybe-project-store-manager',
+    tools: []
   },
   {
     title: 'Blogs API',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-backend/main/imgs/06_project_blogs_api.webp',
-    link: 'https://github.com/davidrogger/trybe-project-blogs-api'
+    link: 'https://github.com/davidrogger/trybe-project-blogs-api',
+    tools: []
   },
   {
     title: 'Trybesmith',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-backend/main/imgs/07_project_trybesmith.webp',
-    link: 'https://github.com/davidrogger/trybe-project-trybesmith'
+    link: 'https://github.com/davidrogger/trybe-project-trybesmith',
+    tools: []
   },
   {
     title: 'Trybe Futebol Club',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-futebol-club/main/readme-imgs/project_top.webp',
-    link: 'https://github.com/davidrogger/trybe-project-futebol-club'
+    link: 'https://github.com/davidrogger/trybe-project-futebol-club',
+    tools: []
   },
   {
     title: 'Car Shop',
-    type: 'backend',
+    development: 'Back-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-backend/main/imgs/11_project_trybe_car_shop.webp',
-    link: 'https://github.com/davidrogger/trybe-project-car-shop'
+    link: 'https://github.com/davidrogger/trybe-project-car-shop',
+    tools: []
   },
 ];
 
 const fullstack = [
   {
     title: 'Delivery App',
-    type: 'fullstack',
+    development: 'Full Stack',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-delivery-app/main/readme-imgs/project_fe_mid.webp',
-    link: 'https://github.com/davidrogger/trybe-project-delivery-app'
+    link: 'https://github.com/davidrogger/trybe-project-delivery-app',
+    tools: []
   },
   {
     title: 'Talker Manager II',
-    type: 'fullstack',
+    development: 'Full Stack',
     img: 'https://img.youtube.com/vi/5j2_DD0e708/0.jpg',
-    link: 'https://github.com/davidrogger/talker-manager-ts'
+    link: 'https://github.com/davidrogger/talker-manager-ts',
+    tools: []
   },
 ];
 
