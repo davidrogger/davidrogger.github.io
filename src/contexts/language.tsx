@@ -25,10 +25,10 @@ type PageStructure = {
     home: Home,
     projects: {
       title: string,
+      intro: string,
       card: {
         topic1: string,
         topic2: string,
-        topic3: string,
       }
     }
   },

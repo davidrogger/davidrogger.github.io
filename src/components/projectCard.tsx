@@ -55,11 +55,11 @@ export function ProjectCard({ title, img, link, development, tools }:ProjectCard
 
         </div>
         <Link
-          className='text-blue-400 underline text-end absolute inset-x-2 bottom-1'
+          className='underline text-end absolute inset-x-2 bottom-1'
           to={link}
           target='_blank'
         >
-          {section.projects.card.topic3}
+          {section.projects.card.topic2}
         </Link>
       </div>
     </div>

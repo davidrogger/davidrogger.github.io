@@ -9,10 +9,16 @@ export function Projects(){
   return (
     <div>
       <h1
-        className='text-xl'
+        className='text-2xl mb-8'
       >
         {section.projects.title}
       </h1>
+
+      <p
+        className=''
+      >
+        {section.projects.intro}
+      </p>
 
       <div
         className='flex gap-3 overflow-hidden mt-10 flex-wrap justify-center'
