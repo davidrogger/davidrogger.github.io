@@ -8,7 +8,11 @@ export function Projects(){
   const { content: { section } } = userLanguageContext();
   return (
     <div>
-      <h1>{section.projects.title}</h1>
+      <h1
+        className='text-xl'
+      >
+        {section.projects.title}
+      </h1>
 
       <div
         className='flex gap-3 overflow-hidden mt-10 flex-wrap justify-center'
