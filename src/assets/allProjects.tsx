@@ -129,9 +129,17 @@ const fullstack = [
   },
 ];
 
-export const projects = [
+const all = [
   ...fullstack,
   ...backend,
   ...frontend,
   ...testing,
 ];
+
+export const projectsCatalog = {
+  All: all,
+  FullStack: fullstack,
+  'Back-end': backend,
+  'Front-end': frontend,
+  Testing: testing,
+};
