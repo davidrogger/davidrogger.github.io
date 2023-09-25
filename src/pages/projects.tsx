@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
 import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
+import { ArrowBigRight, ArrowBigRightDash, LucideIcon } from 'lucide-react';
 
 import { Project, ProjectCategories, projectsCatalog } from '@/assets/allProjects';
 
@@ -15,16 +16,18 @@ export function Projects(){
   const { content: { section } } = userLanguageContext();
 
   const [allProjects, setAllProjects] = useState<Project[]>(projectsCatalog[getProjectFilterPath(pathname) || 'all']);
-  const [displayedProjects, setDisplayedProjects] = useState(projectsCatalog[getProjectFilterPath(pathname) || 'all']);
+  const [page, setPage] = useState<number>(1);
+  const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
 
   function handleProjectsFilter(filter: string) {
     const projectsFilter = filter === 'All' || filter === 'Todos' ? '' : `/${filter}`;
 
     navigate(`/${getPathLanguage(pathname)}/projects${projectsFilter}`);
-    setDisplayedProjects(projectsCatalog[filter.toLowerCase() as ProjectCategories]);
+    setAllProjects(projectsCatalog[filter.toLowerCase() as ProjectCategories]);
+    setPage(1);
   }
 
-  function findPagesQuantity() {
+  function getPagesQuantity() {
     const displayThreshold = 15;
     return Math.ceil(allProjects.length / displayThreshold );
   }
@@ -34,6 +37,19 @@ export function Projects(){
     if (!filterPath) return filter === 'All' || filter === 'Todos';
     return filter === filterPath;
   }
+
+  useEffect(() => {
+    function loadDisplayedProjects(pageNumber:number) {
+      const pageThreshold = 15;
+      const lastProjectPage = pageThreshold * pageNumber;
+      const firstProjectPage = pageNumber === 1 ? 0 : lastProjectPage - pageThreshold;
+      const firstPage = allProjects.slice(firstProjectPage, lastProjectPage);
+      console.log(pageNumber);
+      setDisplayedProjects(firstPage);
+    }
+
+    loadDisplayedProjects(page);
+  }, [page, allProjects]);
 
   return (
     <div>
@@ -74,6 +90,30 @@ export function Projects(){
             {...project}
           />
         ))}
+
+        <div className='absolute -bottom-5 border-dashed p-2 w-full flex justify-end gap-2'>
+          {Array.from({ length: getPagesQuantity() }, (_, index) => (
+            <button
+              data-selected={page === (index + 1)}
+              key={index}
+              className='opacity-60 data-[selected=true]:opacity-100 text-sm'
+              onClick={() => setPage(index + 1)}
+            >
+              { index + 1 }
+            </button>
+          ))}
+          {[ArrowBigRight, ArrowBigRightDash].map((Arrow:LucideIcon, key) => (
+            <button
+              key={key}
+              className='opacity-60'
+            >
+              <Arrow
+                size={16}
+                strokeWidth={0.5}
+              />
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
