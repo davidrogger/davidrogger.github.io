@@ -29,6 +29,18 @@ export const routes:RouteObject[] = [
             path: 'projects',
             element: <Projects />,
           },
+          {
+            path: 'projects/fullstack',
+            element: <Projects />,
+          },
+          {
+            path: 'projects/backend',
+            element: <Projects />,
+          },
+          {
+            path: 'projects/frontend',
+            element: <Projects />,
+          },
         ]
       },
     ],

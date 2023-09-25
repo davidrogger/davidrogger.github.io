@@ -26,6 +26,7 @@ type PageStructure = {
     projects: {
       title: string,
       intro: string,
+      filters: string[],
       card: {
         topic1: string,
         topic2: string,

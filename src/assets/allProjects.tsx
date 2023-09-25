@@ -1,4 +1,12 @@
-const frontend = [
+export type Project = {
+  title: string;
+  development: string,
+  img: string,
+  link: string,
+  tools: string[]
+}
+
+const frontend:Project[] = [
   {
     title: 'Solar System',
     development: 'Front-end',
@@ -57,7 +65,7 @@ const frontend = [
   },
 ];
 
-const testing = [
+const testing:Project[] = [
   {
     title: 'RTL',
     development: 'Testing',
@@ -67,7 +75,7 @@ const testing = [
   },
 ];
 
-const backend = [
+const backend:Project[] = [
   {
     title: 'Talker Manager',
     development: 'Back-end',
@@ -112,7 +120,7 @@ const backend = [
   },
 ];
 
-const fullstack = [
+const fullstack:Project[] = [
   {
     title: 'Delivery App',
     development: 'Full Stack',
@@ -136,10 +144,12 @@ const all = [
   ...testing,
 ];
 
-export const projectsCatalog = {
-  All: all,
-  FullStack: fullstack,
-  'Back-end': backend,
-  'Front-end': frontend,
-  Testing: testing,
+export type ProjectCategories = 'all' | 'fullstack' | 'backend' | 'frontend' | 'testing';
+
+export const projectsCatalog:{[key in ProjectCategories]: Project[]} = {
+  all,
+  fullstack,
+  backend,
+  frontend,
+  testing,
 };
