@@ -21,7 +21,7 @@
       "projects": {
         "title": "Projetos",
         "intro": "Visão geral dos projetos que realizei, apresentando as ferramentas e tecnologias utilizadas, com um link que irá lhe direcionar para o repositório ou página.",
-        "filters": ["Todos", "fullstack", "backend", "frontend"],
+        "filters": ["Todos", "Fullstack", "Backend", "Frontend"],
         "card": {
           "topic1": "Desenvolvimento",
           "topic2": "Detalhes"
@@ -56,7 +56,7 @@
       "projects": {
         "title": "Projects",
         "intro": "Overview of the projects I have undertaken, presenting the tools and technologies used, with a link that will direct you to the repository or page.",
-        "filters": ["All", "fullstack", "backend", "frontend"],
+        "filters": ["All", "Fullstack", "Backend", "Frontend"],
         "card": {
           "topic1": "Development",
           "topic2": "Details"
