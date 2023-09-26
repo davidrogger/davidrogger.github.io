@@ -41,6 +41,10 @@ export const routes:RouteObject[] = [
             path: 'projects/frontend',
             element: <Projects />,
           },
+          {
+            path: 'projects/qa',
+            element: <Projects />,
+          },
         ]
       },
     ],

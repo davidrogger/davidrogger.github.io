@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { userLanguageContext } from '@/contexts/language';
 import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
 import { getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
-import { ArrowBigRight, ArrowBigRightDash, LucideIcon } from 'lucide-react';
+import { ArrowBigRight, LucideIcon } from 'lucide-react';
 
 import { Project, projectsCatalog } from '@/assets/allProjects';
 
@@ -35,7 +35,7 @@ export function Projects(){
   function isFilterSelected(filter:string) {
     const filterPath = getProjectFilterPath(pathname);
     if (!filterPath) return filter === 'All' || filter === 'Todos';
-    return filter === filterPath;
+    return filter.toLowerCase() === filterPath;
   }
 
   useEffect(() => {
@@ -68,13 +68,13 @@ export function Projects(){
         className='flex gap-3 mt-20 mb-5 flex-wrap justify-center px-2 py-10 rounded-xl relative'
       >
         <div className='flex justify-center absolute -top-5 left-0 w-full'>
-          <div className='flex gap-4 border w-[400px] h-10 rounded-full bg-primary overflow-hidden'>
+          <div className='flex border rounded-full bg-primary overflow-y-hidden'>
             {section.projects.filters.map((dev) => {
               return (
                 <button
                   key={dev}
                   data-selected={isFilterSelected(dev)}
-                  className='hover:bg-accent data-[selected=true]:bg-accent h-full flex-grow duration-300 ease-in-out'
+                  className='hover:bg-accent data-[selected=true]:bg-accent h-full flex-grow duration-300 ease-in-out py-2 px-3'
                   onClick={() => handleProjectsFilter(dev)}
                 >
                   {dev}
@@ -101,10 +101,13 @@ export function Projects(){
               { index + 1 }
             </button>
           ))}
-          {[ArrowBigRight, ArrowBigRightDash].map((Arrow:LucideIcon, key) => (
+          {[ArrowBigRight].map((Arrow:LucideIcon, key) => (
             <button
               key={key}
-              className='opacity-60'
+              className='opacity-60 disabled:cursor-not-allowed'
+              title={section.projects.page}
+              disabled={getPagesQuantity() === 1}
+              onClick={() => setPage(page + 1)}
             >
               <Arrow
                 size={16}

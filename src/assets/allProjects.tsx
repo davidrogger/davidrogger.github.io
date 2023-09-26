@@ -65,7 +65,7 @@ const frontend:Project[] = [
   },
 ];
 
-const testing:Project[] = [
+const qa:Project[] = [
   {
     title: 'RTL',
     development: 'Testing',
@@ -141,15 +141,15 @@ const all = [
   ...fullstack,
   ...backend,
   ...frontend,
-  ...testing,
+  ...qa,
 ];
 
-export type ProjectCategories = 'all' | 'fullstack' | 'backend' | 'frontend' | 'testing';
+export type ProjectCategories = 'all' | 'fullstack' | 'backend' | 'frontend' | 'qa';
 
 export const projectsCatalog:{[key in ProjectCategories]: Project[]} = {
   all,
   fullstack,
   backend,
   frontend,
-  testing,
+  qa,
 };

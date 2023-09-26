@@ -30,7 +30,8 @@ type PageStructure = {
       card: {
         topic1: string,
         topic2: string,
-      }
+      },
+      page: string
     }
   },
   footer: {
