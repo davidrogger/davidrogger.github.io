@@ -14,7 +14,10 @@ type Navbar = {
 }
 
 type Home = {
-  title: string,
+  intro: string,
+  start: string,
+  middle: string,
+  end: string,
 }
 
 type PageStructure = {
