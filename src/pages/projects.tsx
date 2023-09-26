@@ -3,9 +3,10 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
 import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
+import { getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
 import { ArrowBigRight, ArrowBigRightDash, LucideIcon } from 'lucide-react';
 
-import { Project, ProjectCategories, projectsCatalog } from '@/assets/allProjects';
+import { Project, projectsCatalog } from '@/assets/allProjects';
 
 import { ProjectCard } from '@/components/projectCard';
 
@@ -20,10 +21,9 @@ export function Projects(){
   const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
 
   function handleProjectsFilter(filter: string) {
-    const projectsFilter = filter === 'All' || filter === 'Todos' ? '' : `/${filter}`;
-
-    navigate(`/${getPathLanguage(pathname)}/projects${projectsFilter}`);
-    setAllProjects(projectsCatalog[filter.toLowerCase() as ProjectCategories]);
+    const filterLowerCase = filter.toLowerCase();
+    navigate(`/${getPathLanguage(pathname)}/projects${getProjectRouteByCategory(filterLowerCase)}`);
+    setAllProjects(projectsCatalog[getCategoryTypeByName(filterLowerCase)]);
     setPage(1);
   }
 
@@ -44,7 +44,6 @@ export function Projects(){
       const lastProjectPage = pageThreshold * pageNumber;
       const firstProjectPage = pageNumber === 1 ? 0 : lastProjectPage - pageThreshold;
       const firstPage = allProjects.slice(firstProjectPage, lastProjectPage);
-      console.log(pageNumber);
       setDisplayedProjects(firstPage);
     }
 
@@ -69,7 +68,7 @@ export function Projects(){
         className='flex gap-3 mt-20 mb-5 flex-wrap justify-center px-2 py-10 rounded-xl relative'
       >
         <div className='flex justify-center absolute -top-5 left-0 w-full'>
-          <div className='flex gap-4 border w-1/2 h-10 rounded-full bg-primary overflow-hidden'>
+          <div className='flex gap-4 border w-[400px] h-10 rounded-full bg-primary overflow-hidden'>
             {section.projects.filters.map((dev) => {
               return (
                 <button
