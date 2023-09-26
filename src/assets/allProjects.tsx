@@ -8,6 +8,13 @@ export type Project = {
 
 const frontend:Project[] = [
   {
+    title: 'Organa Engenharia',
+    development: 'Front-end',
+    img: 'https://raw.githubusercontent.com/davidrogger/davidrogger.github.io/version-01/src/images/organa_engenharia.png',
+    link: 'https://www.organaengenharia.com.br/',
+    tools: ['nodejs', 'typescript', 'reactjs', 'tailwindcss']
+  },
+  {
     title: 'Solar System',
     development: 'Front-end',
     img: 'https://raw.githubusercontent.com/davidrogger/trybe-project-solar-system/main/imgs/project_solar_system_top.jpg',

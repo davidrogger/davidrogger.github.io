@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { SiExpress, SiReact, SiJavascript, SiAxios, SiReacthookform, SiStyledcomponents, SiNodedotjs, SiMysql, SiJsonwebtokens, SiSequelize, SiNextdotjs, SiTypescript, SiDocker, SiMocha, SiChai, SiJest, SiTestinglibrary, SiSwagger, SiZod, SiMongodb, SiMongoose, SiBootstrap, SiRedux } from 'react-icons/si';
+import { SiExpress, SiReact, SiJavascript, SiAxios, SiReacthookform, SiStyledcomponents, SiNodedotjs, SiMysql, SiJsonwebtokens, SiSequelize, SiNextdotjs, SiTypescript, SiDocker, SiMocha, SiChai, SiJest, SiTestinglibrary, SiSwagger, SiZod, SiMongodb, SiMongoose, SiBootstrap, SiRedux, SiTailwindcss } from 'react-icons/si';
 
 export const Icon: Record<string, IconType> = {
   expressjs: SiExpress,
@@ -25,4 +25,5 @@ export const Icon: Record<string, IconType> = {
   mongoose: SiMongoose,
   bootstrap: SiBootstrap,
   'react-redux': SiRedux,
+  tailwindcss: SiTailwindcss
 };
