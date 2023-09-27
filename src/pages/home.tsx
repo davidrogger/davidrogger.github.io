@@ -1,4 +1,9 @@
+
+import { useEffect } from 'react';
+
 import { userLanguageContext } from '@/contexts/language';
+import { useTabName } from '@/hooks/useTabName';
+import { changeTitleTo } from '@/services/handleTitle';
 
 import jobImg from '../images/clean_computer.png';
 import dvdImg from '../images/dvd.jpeg';
@@ -6,6 +11,12 @@ import helloGif from '../images/hello-world.gif';
 
 export function Home(){
   const { content: { section: { home } } } = userLanguageContext();
+
+  const { tabName } = useTabName();
+
+  useEffect(() => {
+    changeTitleTo(tabName);
+  }, []);
 
   return (
     <div

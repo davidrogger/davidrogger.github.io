@@ -4,7 +4,7 @@ import { userLanguageContext } from '@/contexts/language';
 import { getPathLanguage } from '@/services/handlePath';
 
 export default function Header() {
-  const { content } = userLanguageContext();
+  const { content, portfolioName } = userLanguageContext();
   const { header } = content;
   const { pathname } = useLocation();
 
@@ -14,7 +14,7 @@ export default function Header() {
     >
       <div className='flex items-center border-r'>
         <h2 className='text-xl mr-3 text-accent-foreground'>
-          {'<DavídRoggér />'}
+          {portfolioName}
         </h2>
       </div>
 

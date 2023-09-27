@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
+import { useTabName } from '@/hooks/useTabName';
 import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
 import { delay, getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
+import { changeTitleTo } from '@/services/handleTitle';
 import { ArrowBigRight, LucideIcon } from 'lucide-react';
 
 import { Project, projectsCatalog } from '@/assets/allProjects';
@@ -13,6 +15,7 @@ import { ProjectLoading } from '@/components/project-loading';
 
 export function Projects(){
   const { pathname } = useLocation();
+  const { tabName } = useTabName();
   const navigate = useNavigate();
 
   const { content: { section } } = userLanguageContext();
@@ -42,7 +45,6 @@ export function Projects(){
   }
 
   function hasNextPage() {
-    console.log(getPagesQuantity() === 1 || getPagesQuantity() === page);
     return getPagesQuantity() < 1 || getPagesQuantity() !== page;
   }
 
@@ -57,7 +59,7 @@ export function Projects(){
       await delay();
       setIsLoading(false);
     }
-
+    changeTitleTo(tabName);
     loadDisplayedProjects(page);
   }, [page, allProjects]);
 

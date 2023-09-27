@@ -20,7 +20,7 @@ type Home = {
   end: string,
 }
 
-type PageStructure = {
+export type PageStructure = {
   header: {
     navbar: Navbar[],
   },
@@ -46,7 +46,8 @@ type PageStructure = {
 
 type LanguageContextProps = {
   content: PageStructure,
-  setContent: Dispatch<React.SetStateAction<PageStructure>>
+  setContent: Dispatch<React.SetStateAction<PageStructure>>,
+  portfolioName: string,
 }
 
 const LanguageContext = createContext<LanguageContextProps>({} as LanguageContextProps);
@@ -55,7 +56,7 @@ export function LanguageProvider({ children }:{children:ReactNode}) {
   const { pathname } = useLocation();
   const [content, setContent] = useState<PageStructure>(contentData[getPathLanguage(pathname)] as PageStructure);
   return (
-    <LanguageContext.Provider value={{ content, setContent }}>
+    <LanguageContext.Provider value={{ content, setContent, portfolioName: contentData.portfolio }}>
       { children }
     </LanguageContext.Provider>
   );
