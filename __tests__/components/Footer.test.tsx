@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Footer from '@/components/Footer.tsx';
+import Footer from '@/components/footer';
 
 describe('<Footer />', () => {
   it('Should render render "Davíd Rogger" text', () => {

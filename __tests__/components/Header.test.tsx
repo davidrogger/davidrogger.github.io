@@ -1,6 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 
-import Header from '@/components/Header';
+import Header from '@/components/header';
 
 describe('<Header />', () => {
   describe('Elements render', () => {
