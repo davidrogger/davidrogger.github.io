@@ -8,7 +8,8 @@ import { ArrowBigRight, LucideIcon } from 'lucide-react';
 
 import { Project, projectsCatalog } from '@/assets/allProjects';
 
-import { ProjectCard } from '@/components/projectCard';
+import { ProjectCard } from '@/components/project-card';
+import { ProjectLoading } from '@/components/project-loading';
 
 export function Projects(){
   const { pathname } = useLocation();
@@ -67,8 +68,10 @@ export function Projects(){
       <div
         className='flex gap-3 mt-20 mb-5 flex-wrap justify-center px-2 py-10 rounded-xl relative'
       >
+        <ProjectLoading />
+
         <div className='flex justify-center absolute -top-5 left-0 w-full'>
-          <div className='flex border rounded-full bg-primary overflow-y-hidden'>
+          <div className='flex border rounded-full bg-primary overflow-y-hidden z-10'>
             {section.projects.filters.map((dev) => {
               return (
                 <button
@@ -90,7 +93,7 @@ export function Projects(){
           />
         ))}
 
-        <div className='absolute -bottom-5 border-dashed p-2 w-full flex justify-end gap-2'>
+        <div className='absolute -bottom-5 border-dashed p-2 w-full flex justify-end gap-2 z-10'>
           {Array.from({ length: getPagesQuantity() }, (_, index) => (
             <button
               data-selected={page === (index + 1)}

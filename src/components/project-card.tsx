@@ -19,12 +19,12 @@ export function ProjectCard({ title, img, link, development, tools }:ProjectCard
     <div
       className='border h-[300px] w-60 opacity-80 rounded-xl overflow-hidden hover:shadow-neutral-400 relative hover:opacity-100 duration-500 ease-in-out'
     >
-      <img 
+      <img
         src={img}
         alt=''
         className='object-cover opacity-70'
       />
-      
+
       <div className='flex flex-col gap-2 bg-primary h-1/2 absolute inset-x-0 bottom-0 py-1 px-2 overflow-hidden'>
         <h1
           className='text-red-500 text-lg whitespace-nowrap'
