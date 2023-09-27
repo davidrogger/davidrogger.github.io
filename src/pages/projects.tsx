@@ -41,6 +41,11 @@ export function Projects(){
     return filter.toLowerCase() === filterPath;
   }
 
+  function hasNextPage() {
+    console.log(getPagesQuantity() === 1 || getPagesQuantity() === page);
+    return getPagesQuantity() < 1 || getPagesQuantity() !== page;
+  }
+
   useEffect(() => {
     async function loadDisplayedProjects(pageNumber:number) {
       setIsLoading(true);
@@ -107,20 +112,20 @@ export function Projects(){
               { index + 1 }
             </button>
           ))}
-          {[ArrowBigRight].map((Arrow:LucideIcon, key) => (
-            <button
-              key={key}
-              className='opacity-60 disabled:cursor-not-allowed'
-              title={section.projects.page}
-              disabled={getPagesQuantity() === 1}
-              onClick={() => setPage(page + 1)}
-            >
-              <Arrow
-                size={16}
-                strokeWidth={0.5}
-              />
-            </button>
-          ))}
+          {hasNextPage()
+            && [ArrowBigRight].map((Arrow:LucideIcon, key) => (
+              <button
+                key={key}
+                className='opacity-60 disabled:cursor-not-allowed'
+                title={section.projects.page}
+                onClick={() => setPage(page + 1)}
+              >
+                <Arrow
+                  size={16}
+                  strokeWidth={0.5}
+                />
+              </button>
+            ))}
         </div>
       </div>
     </div>
