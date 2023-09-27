@@ -71,7 +71,7 @@ export function Projects(){
       <div
         className='flex gap-3 mt-20 mb-5 flex-wrap justify-center px-2 py-10 rounded-xl relative'
       >
-        { isLoading && <ProjectLoading /> }
+        { isLoading && <ProjectLoading loadQt={displayedProjects.length} /> }
 
         <div className='flex justify-center absolute -top-5 left-0 w-full'>
           <div className='flex border rounded-full bg-primary overflow-y-hidden z-10'>
