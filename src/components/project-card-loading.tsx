@@ -9,17 +9,17 @@ export function ProjectCardLoading() {
 
       <div className='flex flex-col gap-2 bg-primary h-1/2 absolute inset-x-0 bottom-0 py-1 px-2 overflow-hidden'>
         <h1
-          className='bg-muted text-base whitespace-nowrap rounded animate-pulse opacity-80'
+          className='bg-muted text-sm whitespace-nowrap rounded animate-pulse opacity-80 w-[90%] mt-1'
         >
           <span className="opacity-0">title</span>
         </h1>
 
-        <div className='flex flex-col justify-between'>
-          <div className='bg-muted animate-pulse w-[80%] text-sm'>
+        <div className='flex flex-col justify-between mt-2'>
+          <div className='bg-muted animate-pulse w-[60%] text-sm rounded'>
             <span className="opacity-0">category</span>
           </div>
 
-          <ul className='flex gap-2 flex-wrap p-2 justify-center'>
+          <ul className='flex gap-2 flex-wrap p-2 justify-center mt-1'>
             {Array.from({ length: 7 }, (_, key) => (
               <div
                 key={key}

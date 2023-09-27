@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
 import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
-import { getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
+import { delay, getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
 import { ArrowBigRight, LucideIcon } from 'lucide-react';
 
 import { Project, projectsCatalog } from '@/assets/allProjects';
@@ -16,6 +16,8 @@ export function Projects(){
   const navigate = useNavigate();
 
   const { content: { section } } = userLanguageContext();
+
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const [allProjects, setAllProjects] = useState<Project[]>(projectsCatalog[getProjectFilterPath(pathname) || 'all']);
   const [page, setPage] = useState<number>(1);
@@ -40,12 +42,15 @@ export function Projects(){
   }
 
   useEffect(() => {
-    function loadDisplayedProjects(pageNumber:number) {
+    async function loadDisplayedProjects(pageNumber:number) {
+      setIsLoading(true);
       const pageThreshold = 15;
       const lastProjectPage = pageThreshold * pageNumber;
       const firstProjectPage = pageNumber === 1 ? 0 : lastProjectPage - pageThreshold;
       const firstPage = allProjects.slice(firstProjectPage, lastProjectPage);
       setDisplayedProjects(firstPage);
+      await delay();
+      setIsLoading(false);
     }
 
     loadDisplayedProjects(page);
@@ -59,16 +64,14 @@ export function Projects(){
         {section.projects.title}
       </h1>
 
-      <p
-        className=''
-      >
+      <p>
         {section.projects.intro}
       </p>
 
       <div
         className='flex gap-3 mt-20 mb-5 flex-wrap justify-center px-2 py-10 rounded-xl relative'
       >
-        <ProjectLoading />
+        { isLoading && <ProjectLoading /> }
 
         <div className='flex justify-center absolute -top-5 left-0 w-full'>
           <div className='flex border rounded-full bg-primary overflow-y-hidden z-10'>

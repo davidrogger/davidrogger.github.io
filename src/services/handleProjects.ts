@@ -24,3 +24,10 @@ export function getProjectRouteByCategory(category:string) {
   const rootRoute = '';
   return categoriesRoute[category] || rootRoute;
 }
+
+export async function delay(time:number = 500) {
+  await new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+  return time;
+}
