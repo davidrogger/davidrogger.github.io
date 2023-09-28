@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
-import { useTabName } from '@/hooks/useTabName';
-import { getPathLanguage, getProjectFilterPath } from '@/services/handlePath';
+import { usePathname } from '@/hooks/usePathname';
 import { delay, getCategoryTypeByName, getProjectRouteByCategory } from '@/services/handleProjects';
-import { changeTitleTo } from '@/services/handleTitle';
+import { updateTabTitle } from '@/services/handleTitle';
 import { ArrowBigRight, LucideIcon } from 'lucide-react';
 
 import { Project, projectsCatalog } from '@/assets/allProjects';
@@ -14,21 +13,20 @@ import { ProjectCard } from '@/components/project-card';
 import { ProjectLoading } from '@/components/project-loading';
 
 export function Projects(){
-  const { pathname } = useLocation();
-  const { tabName } = useTabName();
+  const { language, projectFilter } = usePathname();
   const navigate = useNavigate();
 
-  const { content: { section } } = userLanguageContext();
+  const { content: { section }, portfolioName } = userLanguageContext();
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const [allProjects, setAllProjects] = useState<Project[]>(projectsCatalog[getProjectFilterPath(pathname) || 'all']);
+  const [allProjects, setAllProjects] = useState<Project[]>(projectsCatalog[projectFilter || 'all']);
   const [page, setPage] = useState<number>(1);
   const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
 
   function handleProjectsFilter(filter: string) {
     const filterLowerCase = filter.toLowerCase();
-    navigate(`/${getPathLanguage(pathname)}/projects${getProjectRouteByCategory(filterLowerCase)}`);
+    navigate(`/${language}/projects${getProjectRouteByCategory(filterLowerCase)}`);
     setAllProjects(projectsCatalog[getCategoryTypeByName(filterLowerCase)]);
     setPage(1);
   }
@@ -39,9 +37,8 @@ export function Projects(){
   }
 
   function isFilterSelected(filter:string) {
-    const filterPath = getProjectFilterPath(pathname);
-    if (!filterPath) return filter === 'All' || filter === 'Todos';
-    return filter.toLowerCase() === filterPath;
+    if (!projectFilter) return filter === 'All' || filter === 'Todos';
+    return filter.toLowerCase() === projectFilter;
   }
 
   function hasNextPage() {
@@ -59,7 +56,8 @@ export function Projects(){
       await delay();
       setIsLoading(false);
     }
-    changeTitleTo(tabName);
+    const tabTitle = `${portfolioName} - ${section.projects.sectionName}`;
+    updateTabTitle(tabTitle);
     loadDisplayedProjects(page);
   }, [page, allProjects]);
 
@@ -68,7 +66,7 @@ export function Projects(){
       <h1
         className='text-2xl mb-8'
       >
-        {section.projects.title}
+        {section.projects.sectionName}
       </h1>
 
       <p>
@@ -119,7 +117,7 @@ export function Projects(){
               <button
                 key={key}
                 className='opacity-60 disabled:cursor-not-allowed'
-                title={section.projects.page}
+                title={section.projects.paginationTooltip}
                 onClick={() => setPage(page + 1)}
               >
                 <Arrow

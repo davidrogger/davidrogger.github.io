@@ -2,22 +2,19 @@
 import { useEffect } from 'react';
 
 import { userLanguageContext } from '@/contexts/language';
-import { useTabName } from '@/hooks/useTabName';
-import { changeTitleTo } from '@/services/handleTitle';
+import { updateTabTitle } from '@/services/handleTitle';
 
 import jobImg from '../images/clean_computer.png';
 import dvdImg from '../images/dvd.jpeg';
 import helloGif from '../images/hello-world.gif';
 
 export function Home(){
-  const { content: { section: { home } } } = userLanguageContext();
-
-  const { tabName } = useTabName();
+  const { content: { section }, portfolioName } = userLanguageContext();
 
   useEffect(() => {
-    changeTitleTo(tabName);
+    const tabTitle = `${portfolioName} - ${section.home.sectionName}`;
+    updateTabTitle(tabTitle);
   }, []);
-
   return (
     <div
       className='flex flex-col gap-2'
@@ -29,12 +26,12 @@ export function Home(){
           <h1
             className='text-2xl mb-5'
           >
-            {`${home.intro} 🤓`}
+            {`${section.home.intro} 🤓`}
           </h1>
           <p
             className='text-justify leading-relaxed indent-5'
           >
-            {home.start}
+            {section.home.start}
           </p>
         </div>
         <img
@@ -56,7 +53,7 @@ export function Home(){
           <p
             className='text-justify leading-relaxed indent-5'
           >
-            {home.middle}
+            {section.home.middle}
           </p>
         </div>
       </div>
@@ -68,7 +65,7 @@ export function Home(){
           <p
             className='text-justify leading-relaxed indent-5'
           >
-            {home.end}
+            {section.home.end}
           </p>
         </div>
         <img

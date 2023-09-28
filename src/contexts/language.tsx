@@ -1,7 +1,6 @@
 import { Dispatch, ReactNode, createContext, useContext, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 
-import { getPathLanguage } from '@/services/handlePath';
+import { usePathname } from '@/hooks/usePathname';
 
 import contentData from '@/assets/languages.json';
 
@@ -13,11 +12,23 @@ type Navbar = {
   tooltip: string,
 }
 
-type Home = {
+type HomeSectionProps = {
+  sectionName: string,
   intro: string,
   start: string,
   middle: string,
   end: string,
+}
+
+type ProjectSectionProps = {
+  sectionName: string,
+  intro: string,
+  filters: string[],
+  card: {
+    topic1: string,
+    topic2: string,
+  },
+  paginationTooltip: string
 }
 
 export type PageStructure = {
@@ -25,17 +36,8 @@ export type PageStructure = {
     navbar: Navbar[],
   },
   section: {
-    home: Home,
-    projects: {
-      title: string,
-      intro: string,
-      filters: string[],
-      card: {
-        topic1: string,
-        topic2: string,
-      },
-      page: string
-    }
+    home: HomeSectionProps,
+    projects: ProjectSectionProps
   },
   footer: {
     navbar: {
@@ -52,12 +54,12 @@ type LanguageContextProps = {
 
 const LanguageContext = createContext<LanguageContextProps>({} as LanguageContextProps);
 
-export function LanguageProvider({ children }:{children:ReactNode}) {
-  const { pathname } = useLocation();
-  const [content, setContent] = useState<PageStructure>(contentData[getPathLanguage(pathname)] as PageStructure);
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const { language } = usePathname();
+  const [content, setContent] = useState<PageStructure>(contentData[language] as PageStructure);
   return (
     <LanguageContext.Provider value={{ content, setContent, portfolioName: contentData.portfolio }}>
-      { children }
+      {children}
     </LanguageContext.Provider>
   );
 }

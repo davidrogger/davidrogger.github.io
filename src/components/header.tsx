@@ -1,12 +1,12 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { userLanguageContext } from '@/contexts/language';
-import { getPathLanguage } from '@/services/handlePath';
+import { usePathname } from '@/hooks/usePathname';
 
 export default function Header() {
   const { content, portfolioName } = userLanguageContext();
   const { header } = content;
-  const { pathname } = useLocation();
+  const { language } = usePathname();
 
   return (
     <header
@@ -20,7 +20,7 @@ export default function Header() {
 
       <nav className='flex text-accent-foreground gap-2'>
         {header.navbar.map(({ section, route, tooltip }, index) => {
-          const languagePath = `/${getPathLanguage(pathname)}`;
+          const languagePath = `/${language}`;
           const redirectRoute = index ? `${languagePath}${route}`: languagePath;
 
           return (

@@ -1,3 +1,4 @@
-export function changeTitleTo(name:string):void {
-  document.title = name;
+export function updateTabTitle(newTitle:string):void {
+  console.log(newTitle);
+  document.title = newTitle;
 }

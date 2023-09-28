@@ -17,20 +17,21 @@
     },
   "section": {
     "home": {
+      "sectionName": "Página Inicial",
       "intro": "Olá! Meu nome é David,",
       "start": "Minha jornada no mundo da tecnologia começou com jogos, que além da diversão que eles proporcionam, criei uma conexão com a capacidade de reconhecer padrões, adaptação a ambientes em constante mudança, colaboração e evolução.",
       "middle": "Por vários anos realizei suporte e manutenção em computadores, onde atendia pessoas com problemas do dia a dia, solucionando problemas seja com suporte remoto ou de hardware de computadores, notebooks e rede. Onde ganhei uma grande experiência de comunicação e busca de soluções. Antes de começar a estudar desenvolvimento fui projetista em uma metalúrgica por 5 anos, criando soluções em chapa, criando desenhos 3D com solidworks, desenvolvimento Habilidade analítica a detalhes",
       "end": "No final de 2021, comecei meus estudos na área de desenvolvimento web em um curso intensivo, onde tive a oportunidade de iniciar meus aprendizados com lógica de programação, git, github, javascript, react, docker, node.js, API Rest e Restful, Arquitetura em Camadas, typescript, ORM, Orientação a objetos, princípios SOLID, SQL, MySQL, NoSQL, MongoDB, Python, Raspagem de dados, Código Limpo, Desenvolvimento de Projetos orientados por testes, estrutura de dados com lista, filas, pilhas, hashmaps e conjuntos. Todo esse material pode ser analisado acessando a página de projetos ou diretamente no meu github."
     },
       "projects": {
-        "title": "Projetos",
+        "sectionName": "Projetos",
         "intro": "Visão geral dos projetos que realizei, apresentando as ferramentas e tecnologias utilizadas, com um link que irá lhe direcionar para o repositório ou página.",
         "filters": ["Todos", "Fullstack", "Backend", "Frontend", "QA"],
         "card": {
           "topic1": "Desenvolvimento",
           "topic2": "Detalhes"
         },
-        "page": "Próxima Página de Projetos"
+        "paginationTooltip": "Próxima Página de Projetos"
       }
     },
     "footer": {
@@ -56,20 +57,21 @@
     },    
     "section": {
       "home": {
+        "sectionName": "Home",
         "intro": "Hello! My name is David,",
-      "start": "My journey in the world of technology began with video games, which, in addition to the fun they provide, created a connection with the ability to recognize patterns, adapt to constantly changing environments, collaborate, and evolve.",
-      "middle": "For several years, I provided support and maintenance for computers, assisting people with their day-to-day issues, troubleshooting problems either through remote support or computer hardware, laptops, and network support. I gained significant experience in communication and problem-solving during this time. Before I started studying development, I worked as a designer at a metallurgical company for 5 years, creating solutions in sheet metal, designing 3D models using SolidWorks, and developing strong analytical skills for details.",
-      "end": "In late 2021, I began my studies in web development through an intensive course. I had the opportunity to start learning about programming logic, Git, GitHub, JavaScript, React, Docker, Node.js, REST and RESTful APIs, Layered Architecture, TypeScript, ORM, Object-Oriented Programming, SOLID principles, SQL, MySQL, NoSQL, MongoDB, Python, Data Scraping, Clean Code, Test-Driven Development, and data structures like lists, queues, stacks, hashmaps, and sets. You can review all this material on my projects page or directly on my GitHub."
+        "start": "My journey in the world of technology began with video games, which, in addition to the fun they provide, created a connection with the ability to recognize patterns, adapt to constantly changing environments, collaborate, and evolve.",
+        "middle": "For several years, I provided support and maintenance for computers, assisting people with their day-to-day issues, troubleshooting problems either through remote support or computer hardware, laptops, and network support. I gained significant experience in communication and problem-solving during this time. Before I started studying development, I worked as a designer at a metallurgical company for 5 years, creating solutions in sheet metal, designing 3D models using SolidWorks, and developing strong analytical skills for details.",
+        "end": "In late 2021, I began my studies in web development through an intensive course. I had the opportunity to start learning about programming logic, Git, GitHub, JavaScript, React, Docker, Node.js, REST and RESTful APIs, Layered Architecture, TypeScript, ORM, Object-Oriented Programming, SOLID principles, SQL, MySQL, NoSQL, MongoDB, Python, Data Scraping, Clean Code, Test-Driven Development, and data structures like lists, queues, stacks, hashmaps, and sets. You can review all this material on my projects page or directly on my GitHub."
       },
       "projects": {
-        "title": "Projects",
+        "sectionName": "Projects",
         "intro": "Overview of the projects I have undertaken, presenting the tools and technologies used, with a link that will direct you to the repository or page.",
         "filters": ["All", "Fullstack", "Backend", "Frontend", "QA"],
         "card": {
           "topic1": "Development",
           "topic2": "Details"
         },
-        "page": "Next Project Page"
+        "paginationTooltip": "Next Project Page"
       }
     },
     "footer": {
