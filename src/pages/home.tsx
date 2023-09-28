@@ -20,9 +20,9 @@ export function Home(){
       className='flex flex-col gap-2'
     >
       <div
-        className='flex items-center border rounded p-8'
+        className='flex max-[640px]:flex-col-reverse items-center border rounded p-8'
       >
-        <div className='w-2/3'>
+        <div className='min-[640px]:w-2/3'>
           <h1
             className='text-2xl mb-5'
           >
@@ -37,19 +37,19 @@ export function Home(){
         <img
           src={dvdImg}
           alt="david image"
-          className='rounded-full overflow-auto p-8'
+          className='rounded-full overflow-auto p-8 w-96'
         />
       </div>
 
       <div
-        className='flex items-center border rounded p-8'
+        className='flex max-[640px]:flex-col items-center border rounded p-8'
       >
         <img
           src={jobImg}
           alt="david image"
-          className='rounded-full w-[45%] p-12'
+          className='rounded-full overflow-auto p-8 w-96'
         />
-        <div className='w-[55%]'>
+        <div className='min-[640px]:w-2/3'>
           <p
             className='text-justify leading-relaxed indent-5'
           >
@@ -59,9 +59,9 @@ export function Home(){
       </div>
 
       <div
-        className='flex items-center border rounded p-8'
+        className='flex max-[640px]:flex-col-reverse items-center border rounded p-8'
       >
-        <div className='w-[65%]'>
+        <div className='min-[640px]:w-2/3'>
           <p
             className='text-justify leading-relaxed indent-5'
           >
@@ -71,7 +71,7 @@ export function Home(){
         <img
           src={helloGif}
           alt="david image"
-          className='rounded-full w-[35%] p-8'
+          className='rounded-full overflow-auto p-8 w-96'
         />
       </div>
     </div>
